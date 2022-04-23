@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+
+int main()
+{
+  float value1;
+  float value2;
+  int operator;
+  float answer;
+
+  printf("SIMPLE CALCULATOR:\n\n");
+  printf("Enter a Value:");
+  scanf("%f", &value1);
+  printf("Enter the operator:");
+  scanf("%d", &operator);
+  printf("Enter a Value:");
+  scanf("%f", &value2);
+  
+  
+
+
+  switch(operator)
+    {
+    case 1: answer = value1/value2;
+      break;
+    case 2: answer = value1*value2;
+      break;
+    case 3: answer = value1+value2;
+      break;
+    case 4: answer = value1-value2;
+      break;
+    case 5: answer = pow(value1,value2);
+      break;
+    case 6: answer = sqrt(value2);
+      break;
+    default: goto fail;
+    }
+  printf("Calulation is:%0.2f",answer);
+  goto exit;
+ fail:
+  printf("Fail.\n");
+ exit:
+  return 0;
+}
